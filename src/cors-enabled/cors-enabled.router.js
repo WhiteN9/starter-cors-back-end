@@ -5,9 +5,10 @@ const cors = require("cors");
 
 // const corsDelete = cors({methods: "DELETE"});
 
+router.use(cors())
+
 router
   .route("/:corsId")
-  .all(cors())
   .get(controller.read)
   .put(controller.update)
   // .delete(cors(), controller.delete)
