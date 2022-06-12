@@ -5,7 +5,7 @@ const cors = require("cors");
 
 // const corsDelete = cors({methods: "DELETE"});
 
-router.use(cors())
+// router.use(cors())
 
 router
   .route("/:corsId")
