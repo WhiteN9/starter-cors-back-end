@@ -7,13 +7,15 @@ const cors = require("cors");
 
 router
   .route("/:corsId")
+  .all(cors())
   .get(controller.read)
   .put(controller.update)
   // .delete(cors(), controller.delete)
 
   // .delete(corsDelete, controller.delete)
   // .options(corsDelete)
-  
+
+  .delete(controller.delete)
   .all(methodNotAllowed);
 
 router
